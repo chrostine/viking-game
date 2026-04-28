@@ -228,6 +228,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 31155dfebe6ae4a418b37f8b0b0a4a61, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::Enemies
+  rb: {fileID: 1786530555}
 --- !u!1 &1442120242 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 8810734171545765249, guid: eb90d5d8de0c44ebdb3c40ada732f0c2, type: 3}

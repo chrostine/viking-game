@@ -9,13 +9,27 @@ public class ReactionBar : MonoBehaviour
     private float currentPosition;
     private int direction = 1; 
 
+    private bool isActive = false;
+
+
     void Start()
     {
-        
+    barBackground.SetActive(false);
+    }
+
+    public void Activate(){
+        barBackground.SetActive(true);
+        isActive = true;
+    }
+
+    public void Deactivate(){
+        barBackground.SetActive(false);
+        isActive = false;
     }
 
     void Update()
     {
+        if (isActive == true){
         //flytter "nålen"
         currentPosition += (speed*direction*Time.deltaTime);
 
@@ -32,5 +46,6 @@ public class ReactionBar : MonoBehaviour
 
        needle.anchoredPosition = new Vector2(Mathf.Lerp(-300f, 300f, currentPosition),0);
     
+    }
     }
 }

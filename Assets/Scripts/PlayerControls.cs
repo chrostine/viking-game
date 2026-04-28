@@ -6,6 +6,7 @@ public class PlayerControls : MonoBehaviour
     private Rigidbody2D rb;
     private Vector2 moveInput;
     public float moveSpeed = 4f;
+    private int powerUpCount = 0;
 
     void Start()
     {
@@ -21,5 +22,11 @@ public class PlayerControls : MonoBehaviour
     void FixedUpdate()
     {
         rb.linearVelocity = moveInput * moveSpeed;
+    }
+
+    public void CollectPowerUp()
+    {
+      powerUpCount++;
+      Debug.Log("PowerUps collected: " + powerUpCount);
     }
 }

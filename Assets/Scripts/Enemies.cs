@@ -3,6 +3,7 @@ using UnityEngine;
 public class Enemies : MonoBehaviour
 {
     private SpriteRenderer sr;
+    public ReactionBar rb;
 
     void Start()
     {
@@ -21,6 +22,7 @@ public class Enemies : MonoBehaviour
     if (other.tag == "Player")
     {
         sr.enabled = true;
+        rb.Activate();
 
     }
     }

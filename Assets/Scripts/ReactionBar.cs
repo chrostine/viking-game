@@ -4,6 +4,8 @@ public class ReactionBar : MonoBehaviour
 {
     public RectTransform needle;
     public GameObject barBackground;
+    public CombatManager combatManager;
+    public RectTransform hitZone;
 
     private float speed = 0.5f;
     private float currentPosition;
@@ -45,7 +47,29 @@ public class ReactionBar : MonoBehaviour
             }
 
        needle.anchoredPosition = new Vector2(Mathf.Lerp(-300f, 300f, currentPosition),0);
-    
+
+        if (Input.GetKeyDown(KeyCode.Space))
+        {
+            if (currentPosition >= 0.4f && currentPosition <= 0.6f)
+                {
+                   combatManager.OnHit();
+                }
+                else
+                {
+                    combatManager.OnMiss();
+                }
+
+             }
+        }
     }
+
+    public void SetDifficulty(int kills)
+    {
+        speed = 0.5f + (kills * 0.15f);
+        Debug.Log("Speed er nu: " + speed);
+
+        hitZone.sizeDelta = new Vector2(100f - (kills * 15f), hitZone.sizeDelta.y);
     }
 }
+
+    

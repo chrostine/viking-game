@@ -4,6 +4,7 @@ public class Enemies : MonoBehaviour
 {
     private SpriteRenderer sr;
     public ReactionBar rb;
+    public CombatManager combatManager;
 
     void Start()
     {
@@ -22,6 +23,7 @@ public class Enemies : MonoBehaviour
     if (other.tag == "Player")
     {
         sr.enabled = true;
+        combatManager.enemy = this.gameObject;
         rb.Activate();
 
     }

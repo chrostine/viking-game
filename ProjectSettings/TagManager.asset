@@ -56,6 +56,15 @@ TagManager:
   - name: road
     uniqueID: 332367977
     locked: 0
+  - name: bar
+    uniqueID: 3460901781
+    locked: 0
+  - name: "gr\xF8ntfelt"
+    uniqueID: 2949086061
+    locked: 0
+  - name: pin
+    uniqueID: 1762160197
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []

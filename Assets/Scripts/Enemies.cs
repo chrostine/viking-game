@@ -2,14 +2,14 @@ using UnityEngine;
 
 public class Enemies : MonoBehaviour
 {
-    private SpriteRenderer sr;
+   // private SpriteRenderer sr;
     public ReactionBar rb;
     public CombatManager combatManager;
 
     void Start()
     {
-    sr = GetComponent<SpriteRenderer>();
-    sr.enabled = false;
+    //sr = GetComponent<SpriteRenderer>();
+    //sr.enabled = false;
     }
 
 
@@ -22,7 +22,7 @@ public class Enemies : MonoBehaviour
     {
     if (other.tag == "Player")
     {
-        sr.enabled = true;
+        //sr.enabled = true;
         combatManager.enemy = this.gameObject;
         rb.Activate();
 

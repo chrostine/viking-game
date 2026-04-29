@@ -6,7 +6,10 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 8c9cfa26abfee488c85f1582747f6a02
+    path: Assets/Scenes/Level1 -laura.unity
+    guid: 607eccef8a7f4402091942a827fdddcf
+  - enabled: 1
+    path: Assets/Scenes/lol - laura.unity
+    guid: 2d9397dec0f374002b1204e3374f97ea
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

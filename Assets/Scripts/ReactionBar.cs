@@ -6,6 +6,7 @@ public class ReactionBar : MonoBehaviour
     public GameObject barBackground;
     public CombatManager combatManager;
     public RectTransform hitZone;
+    public TutorialBeer tutorialBeer;
 
     private float speed = 0.5f;
     private float currentPosition;
@@ -50,14 +51,18 @@ public class ReactionBar : MonoBehaviour
 
         if (Input.GetKeyDown(KeyCode.Space))
         {
-            if (currentPosition >= 0.4f && currentPosition <= 0.6f)
-                {
-                   combatManager.OnHit();
-                }
-                else
-                {
-                    combatManager.OnMiss();
-                }
+           float hitZoneCenter = 0.5f;
+            float hitZoneHalfWidth = (hitZone.sizeDelta.x / 600f) * 0.5f;
+            if (currentPosition >= hitZoneCenter - hitZoneHalfWidth && currentPosition <= hitZoneCenter + hitZoneHalfWidth)
+            {
+                if (combatManager != null) combatManager.OnHit();
+                if (tutorialBeer != null) tutorialBeer.OnHit();
+            }
+            else
+            {
+                if (combatManager != null) combatManager.OnMiss();
+                if (tutorialBeer != null) tutorialBeer.OnMiss();
+            }
 
              }
         }

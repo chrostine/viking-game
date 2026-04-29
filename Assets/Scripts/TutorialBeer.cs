@@ -1,19 +1,9 @@
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class TutorialBeer : MonoBehaviour
-
 {
     public ReactionBar reactionBar;
-
-    void Start()
-    {
-        
-    }
-
-    void Update()
-    {
-        
-    }
 
     void OnTriggerEnter2D(Collider2D other)
     {
@@ -21,5 +11,17 @@ public class TutorialBeer : MonoBehaviour
         {
             reactionBar.Activate();
         }
+    }
+
+   public void OnHit()
+{
+    reactionBar.Deactivate();
+    Destroy(gameObject);
+    SceneManager.LoadScene(1);
+}
+
+    public void OnMiss()
+    {
+        
     }
 }

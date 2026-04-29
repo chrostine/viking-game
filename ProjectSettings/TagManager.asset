@@ -2,7 +2,7 @@
 %TAG !u! tag:unity3d.com,2011:
 --- !u!78 &1
 TagManager:
-  serializedVersion: 2
+  serializedVersion: 3
   tags: []
   layers:
   - Default
@@ -41,3 +41,21 @@ TagManager:
   - name: Default
     uniqueID: 0
     locked: 0
+  - name: grass
+    uniqueID: 2780095091
+    locked: 0
+  - name: water
+    uniqueID: 514867973
+    locked: 0
+  - name: flowers
+    uniqueID: 820726519
+    locked: 0
+  - name: bridge
+    uniqueID: 109830213
+    locked: 0
+  - name: road
+    uniqueID: 332367977
+    locked: 0
+  m_RenderingLayers:
+  - Default
+  m_MigratedRenderPipelines: []

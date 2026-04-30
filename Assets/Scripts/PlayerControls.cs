@@ -28,6 +28,11 @@ public class PlayerControls : MonoBehaviour
     {
     moveInput.x = Input.GetAxisRaw("Horizontal");
     moveInput.y = Input.GetAxisRaw("Vertical");
+
+    if (moveInput.x > 0)
+    transform.localScale = new Vector3(-1,1,1); // højre
+    else if (moveInput.x < 0)
+    transform.localScale = new Vector3(1,1,1); // venstre
     }
 
     void FixedUpdate()
@@ -54,7 +59,7 @@ public class PlayerControls : MonoBehaviour
       float t = Mathf.Clamp01((float)powerUpCount/maxPowerUps);
       acceleration = accelerationCurve.Evaluate(t);
       deceleration = decelerationCurve.Evaluate(t);
-      
+
       Debug.Log("moveSpped: " + moveSpeed);
       Debug.Log("acceleration: " + acceleration);
       Debug.Log("deceleration: " + deceleration);

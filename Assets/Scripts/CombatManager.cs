@@ -6,19 +6,10 @@ public class CombatManager : MonoBehaviour
     public GameObject enemy;
     public GameObject player;
     public GameObject beer;
+    public GameObject deadPlayer;
 
     private int kills = 0;
 
-    void Start()
-    {
-        
-    }
-
-    
-    void Update()
-    {
-        
-    }
  //Når spilleren rammer i reaction baren, skal der spawne en øl på fjendens position, fjenden skal forsvinde og reaction baren skal deaktiveres. Hvis spilleren misser, skal spilleren forsvinde og reaction baren deaktiveres.
     public void OnHit()
 {
@@ -34,6 +25,8 @@ public class CombatManager : MonoBehaviour
 //Når spilleren misser, skal spilleren forsvinde og reaction baren deaktiveres.
     public void OnMiss()
     {
+        Instantiate(deadPlayer, player.transform.position, Quaternion.identity);
+
         player.SetActive(false);
         reactionBar.Deactivate();
     }

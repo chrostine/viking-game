@@ -23,16 +23,11 @@ public class PlayerControls : MonoBehaviour
       UpdateMovementStats();
     }
 
-  //Håndterer spillerens input for bevægelse og opdaterer spillerens position i FixedUpdate for at sikre jævn bevægelse.
+    //Håndterer spillerens input for bevægelse og opdaterer spillerens position i FixedUpdate for at sikre jævn bevægelse.
     void Update()
     {
-    moveInput.x = Input.GetAxisRaw("Horizontal");
-    moveInput.y = Input.GetAxisRaw("Vertical");
-
-    if (moveInput.x > 0)
-    transform.localScale = new Vector3(-1,1,1); // højre
-    else if (moveInput.x < 0)
-    transform.localScale = new Vector3(1,1,1); // venstre
+        moveInput.x = Input.GetAxisRaw("Horizontal");
+        moveInput.y = Input.GetAxisRaw("Vertical");
     }
 
     void FixedUpdate()
@@ -45,7 +40,8 @@ public class PlayerControls : MonoBehaviour
 
       rb.linearVelocity = currentVelocity;
     }
- //viser hvor mange powerups spilleren har samlet, og øger tælleren hver gang en powerup bliver samlet op.
+
+    //viser hvor mange powerups spilleren har samlet, og øger tælleren hver gang en powerup bliver samlet op.
     public void CollectPowerUp()
     {
       powerUpCount++;
@@ -53,7 +49,7 @@ public class PlayerControls : MonoBehaviour
       UpdateMovementStats();
     }
 
-// håndterer acceleration og deceleration, som er afhængig af collected Powerups.
+    // håndterer acceleration og deceleration, som er afhængig af collected Powerups.
     private void UpdateMovementStats ()
     {
       float t = Mathf.Clamp01((float)powerUpCount/maxPowerUps);

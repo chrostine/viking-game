@@ -14,7 +14,9 @@ public class CombatManager : MonoBehaviour
     public void OnHit()
 {
     
-        Instantiate(beer, enemy.transform.position, Quaternion.identity);
+        GameObject spawnedBeer = Instantiate(beer, enemy.transform.position, Quaternion.identity);
+        spawnedBeer.transform.localScale = beer.transform.localScale;
+
         Destroy(enemy);
         enemy = null;
         reactionBar.Deactivate();

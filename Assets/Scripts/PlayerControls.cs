@@ -54,6 +54,7 @@ public class PlayerControls : MonoBehaviour
       float t = Mathf.Clamp01((float)powerUpCount/maxPowerUps);
       acceleration = accelerationCurve.Evaluate(t);
       deceleration = decelerationCurve.Evaluate(t);
+      
       Debug.Log("moveSpped: " + moveSpeed);
       Debug.Log("acceleration: " + acceleration);
       Debug.Log("deceleration: " + deceleration);

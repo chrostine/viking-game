@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 441280272099858995}
   - component: {fileID: 2454906456548839326}
   - component: {fileID: 1800554558904151098}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: Beer
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -82,7 +82,7 @@ SpriteRenderer:
   m_SortingLayer: 0
   m_SortingOrder: 0
   m_MaskInteraction: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: 75f5f34dc1b5347e0b8351032682f224, type: 3}
+  m_Sprite: {fileID: 2897092173280361905, guid: 729d4071b04bf8447925ca1720f71e6b, type: 3}
   m_Color: {r: 1, g: 1, b: 0, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -125,7 +125,7 @@ GameObject:
   - component: {fileID: 467501506865341585}
   - component: {fileID: 4714084027635656520}
   - component: {fileID: 377282262899250082}
-  m_Layer: 0
+  m_Layer: 7
   m_Name: PowerUp
   m_TagString: Untagged
   m_Icon: {fileID: 0}

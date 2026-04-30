@@ -14,22 +14,24 @@ public class ReactionBar : MonoBehaviour
 
     private bool isActive = false;
 
-
+    //baren er ikke vist i starten
     void Start()
     {
     barBackground.SetActive(false);
     }
 
+    //metoder til at aktivere og deaktivere reaction baren, som bliver kaldt fra andre scripts når spilleren kommer ind i en trigger eller rammer/misser i reaction baren.
     public void Activate(){
         barBackground.SetActive(true);
         isActive = true;
     }
-
+    
     public void Deactivate(){
         barBackground.SetActive(false);
         isActive = false;
     }
 
+    //opdaterer positionen af nålen i reaction baren, og håndterer input for at afgøre om spilleren rammer eller misser.
     void Update()
     {
         if (isActive == true){
@@ -46,9 +48,10 @@ public class ReactionBar : MonoBehaviour
                 currentPosition = 0;
                 direction = 1;
             }
-
+    //opdaterer nålens position i UI baseret på currentPosition, som varierer mellem 0 og 1.
        needle.anchoredPosition = new Vector2(Mathf.Lerp(-300f, 300f, currentPosition),0);
 
+    //håndterer input for at afgøre om spilleren rammer eller misser ved at trykke på space, og sammenligner nålens position med hit zonen for at afgøre resultatet.
         if (Input.GetKeyDown(KeyCode.Space))
         {
            float hitZoneCenter = 0.5f;
@@ -67,7 +70,7 @@ public class ReactionBar : MonoBehaviour
              }
         }
     }
-
+ //metode til at øge sværhedsgraden i reaction baren ved at øge hastigheden og gøre hit zonen mindre for hver fjende spilleren har besejret.
     public void SetDifficulty(int kills)
     {
         speed = 0.5f + (kills * 0.15f);

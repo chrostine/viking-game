@@ -13,6 +13,7 @@ public class PlayerControls : MonoBehaviour
       rb = GetComponent<Rigidbody2D>();  
     }
 
+  //Håndterer spillerens input for bevægelse og opdaterer spillerens position i FixedUpdate for at sikre jævn bevægelse.
     void Update()
     {
     moveInput.x = Input.GetAxisRaw("Horizontal");
@@ -23,7 +24,7 @@ public class PlayerControls : MonoBehaviour
     {
         rb.linearVelocity = moveInput * moveSpeed;
     }
-
+ //viser hvor mange powerups spilleren har samlet, og øger tælleren hver gang en powerup bliver samlet op.
     public void CollectPowerUp()
     {
       powerUpCount++;

@@ -38,7 +38,7 @@ TagManager:
   - 
   - 
   m_SortingLayers:
-  - name: grass
+  - name: GRASS
     uniqueID: 2780095091
     locked: 0
   - name: flowers
@@ -47,10 +47,10 @@ TagManager:
   - name: water
     uniqueID: 514867973
     locked: 0
-  - name: road
+  - name: ROAD
     uniqueID: 332367977
     locked: 0
-  - name: top grass
+  - name: BUSHES
     uniqueID: 3480187731
     locked: 0
   - name: bridge

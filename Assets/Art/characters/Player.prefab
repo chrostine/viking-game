@@ -10,6 +10,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6281355132429015499}
   - component: {fileID: 712646305035592531}
+  - component: {fileID: 2630873851042208391}
   - component: {fileID: 5381251472473641706}
   - component: {fileID: 3264029922523050957}
   - component: {fileID: 6048251696937057098}
@@ -29,9 +30,9 @@ Transform:
   m_GameObject: {fileID: 8810734171545765249}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.87444, y: -0.42473, z: 0}
+  m_LocalPosition: {x: -1.0392, y: -0.6673, z: 0}
   m_LocalScale: {x: 0.5, y: 0.5, z: 0.5}
-  m_ConstrainProportionsScale: 0
+  m_ConstrainProportionsScale: 1
   m_Children: []
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -61,6 +62,18 @@ MonoBehaviour:
     m_PreInfinity: 2
     m_PostInfinity: 2
     m_RotationOrder: 4
+--- !u!114 &2630873851042208391
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8810734171545765249}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 56eb3a02158c8497b95f6d529b12cc16, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::PlayerFlip
 --- !u!212 &5381251472473641706
 SpriteRenderer:
   serializedVersion: 2

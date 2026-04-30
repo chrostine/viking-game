@@ -17,7 +17,7 @@ public class Enemies : MonoBehaviour
     {
         
     }
-
+ //Når spilleren kommer ind i triggeren, skal fjenden blive aktiv og kunne rammes i reaction baren.
     void OnTriggerEnter2D(Collider2D other)
     {
     if (other.tag == "Player")

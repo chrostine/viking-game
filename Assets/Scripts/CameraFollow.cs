@@ -12,7 +12,7 @@ public class CameraFollow : MonoBehaviour
     }
 
     void Update()
-    {
+    { // Beregn den ønskede position for kameraet baseret på spillerens position og yOffset
         Vector3 targetPosition = new Vector3(Target.position.x, Target.position.y + yOffset, -10f);
         transform.position = Vector3.Slerp(transform.position, targetPosition, FollowSpeed * Time.deltaTime);
     }

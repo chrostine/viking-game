@@ -7,6 +7,7 @@ public class CombatManager : MonoBehaviour
     public GameObject player;
     public GameObject beer;
     public GameObject deadPlayer;
+    public OnDeath onDeath;
 
     private int kills = 0;
 
@@ -31,5 +32,7 @@ public class CombatManager : MonoBehaviour
 
         player.SetActive(false);
         reactionBar.Deactivate();
+
+        onDeath.Die();
     }
 }

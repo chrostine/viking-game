@@ -8,8 +8,20 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Level1 -laura.unity
     guid: 607eccef8a7f4402091942a827fdddcf
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/lol -laura.unity
     guid: 2d9397dec0f374002b1204e3374f97ea
+  - enabled: 1
+    path: Assets/Scenes/Ellie 1.unity
+    guid: 280b534bc4f4e49f5b39d1f43a65c151
+  - enabled: 1
+    path: Assets/Scenes/Ellie.unity
+    guid: 9e1b8c9459c7b41818d6c3686027ec83
+  - enabled: 1
+    path: Assets/Scenes/END.unity
+    guid: fd13cc10196395649bc5e2eeda2fd0ef
+  - enabled: 1
+    path: Assets/Scenes/START.unity
+    guid: c57c306481a967648a9102d17ad38f06
   m_configObjects:
     com.unity.input.settings.actions: {fileID: -944628639613478452, guid: 2bcd2660ca9b64942af0de543d8d7100, type: 3}

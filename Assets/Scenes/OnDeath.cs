@@ -1,0 +1,12 @@
+using UnityEngine;
+using UnityEngine.Events;
+
+public class OnDeath : MonoBehaviour
+{
+    public UnityEvent onDeath;
+
+    public void Die()
+    {
+        onDeath?.Invoke();
+    }
+}

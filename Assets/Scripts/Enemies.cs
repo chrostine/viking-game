@@ -22,6 +22,8 @@ public class Enemies : MonoBehaviour
     {
     if (other.tag == "Player")
     {
+        other.GetComponent<PlayerControls>().InCombat = true;
+        
         //sr.enabled = true;
         combatManager.enemy = this.gameObject;
         rb.Activate();

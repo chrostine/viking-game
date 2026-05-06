@@ -8,6 +8,7 @@ public class CombatManager : MonoBehaviour
     public GameObject beer;
     public GameObject deadPlayer;
     public OnDeath onDeath;
+    public PlayerControls playerControls;
 
     private int kills = 0;
 
@@ -17,6 +18,8 @@ public class CombatManager : MonoBehaviour
     
         GameObject spawnedBeer = Instantiate(beer, enemy.transform.position, Quaternion.identity);
         spawnedBeer.transform.localScale = beer.transform.localScale;
+
+        playerControls.InCombat = false;
 
         Destroy(enemy);
         enemy = null;
@@ -28,6 +31,15 @@ public class CombatManager : MonoBehaviour
 //Når spilleren misser, skal spilleren forsvinde og reaction baren deaktiveres.
     public void OnMiss()
     {
+        if (playerControls.CurrentMount != null)
+        {
+            playerControls.CurrentMount.Kill();
+            playerControls.CurrentMount = null;
+            return;
+        }
+    
+        playerControls.InCombat = false;
+
         Instantiate(deadPlayer, player.transform.position, Quaternion.identity);
 
         player.SetActive(false);

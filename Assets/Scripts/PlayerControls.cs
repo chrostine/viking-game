@@ -2,7 +2,9 @@ using UnityEngine;
 
 public class PlayerControls : MonoBehaviour
 {
-    
+    public Mount CurrentMount = null;
+    public bool InCombat = false;
+
     private Rigidbody2D rb;
     private Vector2 moveInput;
     private Vector2 currentVelocity;
@@ -11,6 +13,7 @@ public class PlayerControls : MonoBehaviour
     private float deceleration;
 
     public float moveSpeed = 4f;
+    public float moveSpeedMultiplier = 1f;
 
     [Header("Player accerleration")]
     public int maxPowerUps = 10; // det maksimale antal powerups du forventer at spilleren kan samle
@@ -32,7 +35,12 @@ public class PlayerControls : MonoBehaviour
 
     void FixedUpdate()
     {
-      Vector2 targetVelocity = moveInput.normalized * moveSpeed;
+      Vector2 targetVelocity = moveInput.normalized * moveSpeed * moveSpeedMultiplier;
+
+      if (InCombat)
+      {
+        targetVelocity = Vector2.zero; // stop bevægelse når i kamp
+      }
 
       // vælger acceleration eller deceleration afhængigt af om spilleren bevæger sig
       float smoothSpeed = moveInput == Vector2.zero ? deceleration : acceleration;

@@ -62,6 +62,9 @@ TagManager:
   - name: flair
     uniqueID: 2475546255
     locked: 0
+  - name: character
+    uniqueID: 1464642609
+    locked: 0
   m_RenderingLayers:
   - Default
   m_MigratedRenderPipelines: []
